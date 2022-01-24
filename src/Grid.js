@@ -1,6 +1,7 @@
 import React from "react";
 
 const Grid = ({ config, data }) => {
+
   return (
     <div>
       <table>
@@ -10,9 +11,9 @@ const Grid = ({ config, data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((rowData) => (
-            <tr key={rowData.imdbID}>
-              {config.map(item => <td key={item.field}>{item.component ? <item.component data={rowData[item.field]} /> : rowData[item.field]} </td>)}
+          {data.map((rowData, rowIndex) => (
+            <tr key={rowIndex}>
+              {config.map((item) => <td key={item.field}>{item.component ? <item.component data={rowData[item.field]} /> : rowData[item.field]} </td>)}
             </tr>
           ))}
         </tbody>
