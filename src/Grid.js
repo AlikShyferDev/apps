@@ -13,7 +13,7 @@ const Grid = ({ config, data }) => {
         <tbody>
           {data.map((rowData, rowIndex) => (
             <tr key={rowIndex}>
-              {config.map((item) => <td key={item.field}>{item.component ? <item.component data={rowData[item.field]} /> : rowData[item.field]} </td>)}
+              {config.map((item) => <td className={item.className} key={item.field}>{item.component ? <item.component data={rowData[item.field]} /> : rowData[item.field]} </td>)}
             </tr>
           ))}
         </tbody>

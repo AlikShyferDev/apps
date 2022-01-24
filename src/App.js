@@ -20,7 +20,8 @@ const moviesConfig = [
   },
   {
     title: 'title',
-    field: 'Title'
+    field: 'Title',
+    className: 'left'
   },
   {
     title: 'rating',
